@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
 
   - name: SFTPGo Commercial Support Request
-    url: mailto:support@sftpgo.com
+    url: https://www.sftpgo.com/support
     about: Nothing
 
   - name: GitHub Community Support
