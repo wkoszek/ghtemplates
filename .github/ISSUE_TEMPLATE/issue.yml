@@ -1,16 +1,20 @@
 name: Open Source Bug Report
 description: >
   Bug reports only. We can't profile custom configuration help.
-  If you need custom configuration help, see Commercial Support Packages below
+  If you need custom configuration help, see Commercial Support below
 title: "[Bug]: "
 labels: ["bug", "triage"]
-assignees:
-  - octocat
+#assignees:
+#  - octocat
 body:
+
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+        Bug is defined as a crash, or critical error.
+        It's important to keep your report as detailed as possible.
+
   - type: input
     id: contact
     attributes:
@@ -19,6 +23,55 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
+
+  - type: dropdown
+    id: usecase
+    attributes:
+      label: What are you using SFTPGo for?
+      description: We'd like to understand your SFTPGo usecase more
+      multiple: true
+      options:
+        - Private user, home usecase (home backup/VPS)
+        - Professional user, 1 person business
+        - Small business (3-person firm with file exchange?)
+        - Medium business
+        - Enterprise
+
+  - type: dropdown
+    id: support
+    attributes:
+      label: Could we get in touch with you for SFTPGo research?
+      description: We want you to become our champion in your company; we'd love to talk to your C-level execs to potentially consider sponsoring SFTPGo
+      multiple: false
+      options:
+        - Yes
+        - No
+
+  - type: textarea
+    attributes:
+      label: Version of SFTPGo
+      description: Paste the output of sftpgo -v
+      placeholder: SFTPGo 2.5.1-dev ...
+      value: sftpgo version
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Configuration file
+      description: Paste your SFTPGo configuration file
+      value: configfile
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+
   - type: textarea
     id: what-happened
     attributes:
@@ -28,32 +81,16 @@ body:
       value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
-    id: version
+
+  - type: textarea
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: Operating System
+      description: What operating system are you using?
+      placeholder: Example: macOS Big Sur
+      value: operating system
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+
   - type: checkboxes
     id: terms
     attributes:
