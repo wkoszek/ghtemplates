@@ -24,3 +24,26 @@ body:
     validations:
       required: false
        
+  - type: dropdown
+    id: usecase
+    attributes:
+      label: What are you using SFTPGo for?
+      description: We'd like to understand your SFTPGo usecase more
+      multiple: true
+      options:
+        - Private user, home usecase (home backup/VPS)
+        - Professional user, 1 person business
+        - Small business (3-person firm with file exchange?)
+        - Medium business
+        - Enterprise
+ 
+  - type: dropdown
+    id: support
+    attributes:
+      label: Could we get in touch with you for SFTPGo research?
+      description: We want you to become our champion in your company; we'd love to talk to your C-level execs to potentially consider sponsoring SFTPGo
+      multiple: false
+      options:
+        - Yes
+        - No
+   
