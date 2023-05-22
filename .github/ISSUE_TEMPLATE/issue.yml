@@ -1,5 +1,7 @@
-name: ZZZz Bug Report
-description: File a bug report
+name: Open Source Bug Report
+description: >
+  Bug reports only. We can't profile custom configuration help.
+  If you need custom configuration help, see Commercial Support Packages below
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
