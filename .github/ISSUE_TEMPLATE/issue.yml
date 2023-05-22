@@ -4,8 +4,8 @@ description: >
   If you need custom configuration help, see Commercial Support below
 title: "[Bug]: "
 labels: ["bug", "triage"]
-#assignees:
-#  - octocat
+assignees:
+  - octocat
 body:
 
   - type: markdown
