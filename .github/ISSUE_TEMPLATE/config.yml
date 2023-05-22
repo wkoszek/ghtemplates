@@ -3,7 +3,9 @@ contact_links:
 
   - name: SFTPGo Commercial Support Request
     url: https://www.sftpgo.com/support
-    about: Nothing
+    about: >
+        Commercial customers who pay for SFTPGo Support package can report their problems here.
+        Those reports are prioritized over unpaid requests.
 
   - name: GitHub Community Support
     url: https://github.com/orgs/community/discussions
