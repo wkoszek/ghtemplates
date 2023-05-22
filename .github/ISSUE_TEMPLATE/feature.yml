@@ -1,0 +1,63 @@
+name: New Feature Request
+description: >
+  New feature requests only
+  If you need custom configuration help, see Commercial Support below
+title: "[Feature Request]: "
+labels: ["feature", "needs-funding"]
+assignees:
+  - draggan
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+       
+  - type: dropdown
+    id: usecase
+    attributes:
+      label: What are you using SFTPGo for?
+      description: We'd like to understand your SFTPGo usecase more
+      multiple: true
+      options:
+        - "Private user, home usecase (home backup/VPS)"
+        - "Professional user, 1 person business"
+        - "Small business (3-person firm with file exchange?)"
+        - "Medium business"
+        - "Enterprise"
+ 
+  - type: dropdown
+    id: support
+    attributes:
+      label: Could we get in touch with you for SFTPGo research?
+      description: We want you to become our champion in your company; we'd love to talk to your C-level execs to potentially consider sponsoring SFTPGo
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+   
+  - type: textarea
+    id: featurereq
+    attributes:
+      label: Explain the feature request
+      description: Give as many details as possible
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
